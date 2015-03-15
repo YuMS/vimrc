@@ -1,0 +1,6 @@
+Bundle 'drmikehenry/vim-fontsize'
+Bundle 'YuMS/vim-shufflefonts'
+UnBundle 'gorodinskiy/vim-coloresque'
+UnBundle 'tpope/vim-rails'
+UnBundle 'spf13/PIV'
+UnBundle 'arnaud-lb/vim-php-namespace'

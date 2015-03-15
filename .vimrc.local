@@ -1,0 +1,53 @@
+" Hide Menu "{{{
+set guioptions-=m
+" }}}
+" Shuffle Fonts List"{{{
+" ---------------------------------------------------------------------
+let g:shufflefonts_fonts_list = [
+    \'Source_Code_Pro',
+    \'Consolas',
+    \'Share_Tech_Mono',
+    \'PT_Mono',
+    \'ProFontWindows',
+    \'NovaMono',
+    \'Lucida_Console',
+    \'InputMono',
+    \'Inconsolata',
+    \'Fira_Mono',
+    \'Droid_Sans_Mono',
+    \'Cutive_Mono',
+    \'Cousine',
+    \'Courier_New',
+    \'Courier',
+    \'BitStream_Vera_Sans_Mono',
+    \'Arial_monospaced_for_SAP',
+    \'Anonymous_Pro'
+\]
+" }}}
+" Maximum Window on Windows "{{{
+" ---------------------------------------------------------------------
+"
+augroup maximumWindowInWindows
+    au GUIEnter * simalt ~x
+    au GUIEnter * :let &guifont = fontsize#setSize(getfontname(), 18)
+augroup END
+" }}}
+" Toggle Background "{{{
+" ---------------------------------------------------------------------
+function! Togglebackground()
+    if &background == 'dark'
+        set background=light
+    else
+        set background=dark
+    endif
+endfunction
+
+augroup toggleBackgroud
+    au BufEnter * :call Togglebackground()
+augroup END
+" }}}
+" Bufferline "{{{
+let g:bufferline_echo = 0
+" }}}
+
+" vim:foldmethod=marker:foldlevel=0
