@@ -3,33 +3,51 @@ set guioptions-=m
 " }}}
 " Shuffle Fonts List"{{{
 " ---------------------------------------------------------------------
-let g:shufflefonts_fonts_list = [
-    \'Source_Code_Pro',
-    \'Consolas',
-    \'Share_Tech_Mono',
-    \'PT_Mono',
-    \'ProFontWindows',
-    \'NovaMono',
-    \'Lucida_Console',
-    \'InputMono',
-    \'Inconsolata',
-    \'Fira_Mono',
-    \'Droid_Sans_Mono',
-    \'Cutive_Mono',
-    \'Cousine',
-    \'Courier_New',
-    \'Courier',
-    \'BitStream_Vera_Sans_Mono',
-    \'Arial_monospaced_for_SAP',
-    \'Anonymous_Pro'
-\]
+if has('win32') || has('win64')
+    let g:shufflefonts_fonts_list = [
+        \'Source_Code_Pro',
+        \'Consolas',
+        \'Share_Tech_Mono',
+        \'PT_Mono',
+        \'ProFontWindows',
+        \'NovaMono',
+        \'Lucida_Console',
+        \'InputMono',
+        \'Inconsolata',
+        \'Fira_Mono',
+        \'Droid_Sans_Mono',
+        \'Cutive_Mono',
+        \'Cousine',
+        \'Courier_New',
+        \'Courier',
+        \'BitStream_Vera_Sans_Mono',
+        \'Arial_monospaced_for_SAP',
+        \'Anonymous_Pro'
+    \]
+else
+    let g:shufflefonts_fonts_list = [
+        \'Inconsolata',
+        \'InputMono',
+        \'Cousine',
+        \'NovaMono',
+        \'Courier',
+    \]
+endif
+
 " }}}
 " Maximum Window on Windows "{{{
 " ---------------------------------------------------------------------
 "
-augroup maximumWindowInWindows
-    au GUIEnter * simalt ~x
-    au GUIEnter * :let &guifont = fontsize#setSize(getfontname(), 18)
+if has('win32') || has('win64')
+    augroup maximumWindowInWindows
+        au GUIEnter * simalt ~x
+    augroup END
+endif
+" }}}
+" Init Fonts Size"{{{
+" ---------------------------------------------------------------------
+augroup initFontsSize
+    au GUIEnter * :let &guifont = fontsize#setSize(getfontname(), 15)
 augroup END
 " }}}
 " Toggle Background "{{{
