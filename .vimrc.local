@@ -3,37 +3,28 @@ set guioptions-=m
 " }}}
 " Shuffle Fonts List"{{{
 " ---------------------------------------------------------------------
-if has('win32') || has('win64')
-    let g:shufflefonts_fonts_list = [
-        \'Source_Code_Pro',
-        \'Consolas',
-        \'Share_Tech_Mono',
-        \'PT_Mono',
-        \'ProFontWindows',
-        \'NovaMono',
-        \'Lucida_Console',
-        \'InputMono',
-        \'Inconsolata',
-        \'Fira_Mono',
-        \'Droid_Sans_Mono',
-        \'Cutive_Mono',
-        \'Cousine',
-        \'Courier_New',
-        \'Courier',
-        \'BitStream_Vera_Sans_Mono',
-        \'Arial_monospaced_for_SAP',
-        \'Anonymous_Pro'
-    \]
-else
-    let g:shufflefonts_fonts_list = [
-        \'Inconsolata',
-        \'InputMono',
-        \'Cousine',
-        \'NovaMono',
-        \'Courier',
-    \]
-endif
-
+let g:shufflefonts_fonts_list_all = [
+    \'Source_Code_Pro',
+    \'Share_Tech_Mono',
+    \'PT_Mono',
+    \'NovaMono',
+    \'InputMono',
+    \'Inconsolata',
+    \'Fira_Mono',
+    \'Droid_Sans_Mono',
+    \'Cutive_Mono',
+    \'Cousine',
+    \'Courier_New',
+    \'Courier',
+    \'BitStream_Vera_Sans_Mono',
+    \'Anonymous_Pro'
+\]
+let g:shufflefonts_fonts_list_windows = [
+    \'Consolas',
+    \'Arial_monospaced_for_SAP',
+    \'Lucida_Console',
+    \'ProFontWindows'
+\]
 " }}}
 " Maximum Window on Windows "{{{
 " ---------------------------------------------------------------------
