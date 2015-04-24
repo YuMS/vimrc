@@ -15,7 +15,6 @@ let g:shufflefonts_fonts_list_all = [
     \'Cutive_Mono',
     \'Cousine',
     \'Courier_New',
-    \'Courier',
     \'BitStream_Vera_Sans_Mono',
     \'Anonymous_Pro'
 \]
@@ -25,6 +24,7 @@ let g:shufflefonts_fonts_list_windows = [
     \'Lucida_Console',
     \'ProFontWindows'
 \]
+"let g:shufflefonts_on_switch = 0
 " }}}
 " Maximum Window on Windows "{{{
 " ---------------------------------------------------------------------
