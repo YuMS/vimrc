@@ -1,6 +1,7 @@
 Bundle 'drmikehenry/vim-fontsize'
 Bundle 'YuMS/vim-shufflefonts'
 Bundle 'vim-scripts/vcscommand.vim'
+Bundle 'mxw/vim-jsx'
 UnBundle 'gorodinskiy/vim-coloresque'
 UnBundle 'tpope/vim-rails'
 UnBundle 'spf13/PIV'
