@@ -51,9 +51,11 @@ function! Togglebackground()
     endif
 endfunction
 
-augroup toggleBackgroud
-    au BufEnter * :call Togglebackground()
-augroup END
+if has("gui_running")
+    augroup toggleBackgroud
+        au BufEnter * :call Togglebackground()
+    augroup END
+endif
 " }}}
 " Bufferline "{{{
 let g:bufferline_echo = 0
